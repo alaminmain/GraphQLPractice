@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GraphQLPractice
+namespace GraphQLPractice1
 {
     using System;
     using System.Threading.Tasks;
@@ -38,18 +38,18 @@ namespace GraphQLPractice
         }
     }
 
-    public class Program
-    {
-        public static async Task Main(string[] args)
-        {
-            var schema = new Schema { Query = new StarWarsQuery() };
+    //public class Program
+    //{
+    //    //public static async Task Main(string[] args)
+    //    //{
+    //    //    var schema = new Schema { Query = new StarWarsQuery() };
 
-            var json = await schema.ExecuteAsync(_ =>
-            {
-                _.Query = "{ hero1 { id name } }";
-            });
+    //    //    var json = await schema.ExecuteAsync(_ =>
+    //    //    {
+    //    //        _.Query = "{ hero1 { id name } }";
+    //    //    });
 
-            Console.WriteLine(json);
-        }
-    }
+    //    //    Console.WriteLine(json);
+    //    //}
+    //}
 }
